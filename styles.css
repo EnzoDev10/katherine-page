@@ -1,0 +1,60 @@
+/* General Styles */
+@import url(utilities.css);
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: white;
+}
+
+body {
+	background-color: var(--bg-light);
+}
+
+header,
+section {
+	margin: auto;
+	max-width: 1200px;
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* Header Styles */
+header {
+	align-items: center;
+	background-color: var(--secondary-600);
+	border-radius: 0px 50px 0px 50px;
+	display: flex;
+	padding: 1rem 2.5rem;
+	margin-top: 25px;
+}
+
+.logo {
+	margin-right: auto;
+}
+
+.contact-link {
+	margin-right: 49px;
+}
+
+form {
+	background-color: var(--text-color);
+	border-radius: 15px;
+	color: white;
+	display: grid;
+	grid-template-columns: 200px 1fr;
+    gap: 10px;
+	padding: 5px 15px;
+}
+
+form input:focus{
+    outline-color:a ;
+}
+
+form button {
+	width: fit-content;
+}
