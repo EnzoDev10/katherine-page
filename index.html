@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="utilities.css" />
-		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="css/utilities.css" />
+		<link rel="stylesheet" href="css/products.css" />
 		<link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
 		<title>Katherine</title>
 	</head>
@@ -16,45 +16,54 @@
 			<button class="menu-btn">
 				<img src="./images/Menu.png" alt="" aria-hidden="false" />
 			</button>
-			<a href="#contact" class="contact-link">Contacto</a>
-			<form action="" class="search-bar">
-				<input
-					type="text"
-					placeholder="Buscar..."
-					aria-label="ingresar el elemento buscado aqui"
-				/>
-				<button
-					type="submit"
-					aria-label="botón para buscar el elemento introducido en el campo anterior"
-				>
-					<img src="./images/search-icon.svg" alt="search icon" />
-				</button>
-			</form>
 		</header>
 		<section id="products-showcase">
+			<div class="welcome-message">
+				<h1>Bienvenida a mi página, encontrarás uñas press on</h1>
+			</div>
 			<div class="cards-container">
-				<div class="card">
+				<div
+					class="card"
+					id="stiletto-card"
+					aria-label="entrar a la sección de uñas tipo Stiletto"
+				>
+					<img src="images/stiletto-section.png" alt="" aria-hidden="true" />
 					<div class="card-footer bg-red">
-						<p class="product-name">Producto</p>
+						<p class="product-name">Stiletto</p>
 					</div>
 				</div>
-				<div class="card">
+				<div
+					class="card"
+					id="square-card"
+					aria-label="entrar a la sección de uñas tipo Square"
+				>
+					<img src="images/square-section.png" alt="" aria-hidden="true" />
 					<div class="card-footer bg-red">
-						<p class="product-name">Producto</p>
+						<p class="product-name">Square</p>
 					</div>
 				</div>
-				<div class="card">
+				<div
+					class="card"
+					id="almond-card"
+					aria-label="entrar a la sección de uñas tipo almond"
+				>
+					<img src="images/almond-section.png" alt="" aria-hidden="true" />
 					<div class="card-footer bg-red">
-						<p class="product-name">Producto</p>
+						<p class="product-name">Almond</p>
 					</div>
 				</div>
-				<div class="card">
+				<div
+					class="card"
+					id="coffin-card"
+					aria-label="entrar a la sección de uñas tipo coffin"
+				>
+					<img src="images/coffin-section.png" alt="" aria-hidden="true" />
 					<div class="card-footer bg-red">
-						<p class="product-name">Producto</p>
+						<p class="product-name">Coffin</p>
 					</div>
 				</div>
 			</div>
-			<div class="brand-decoration">
+			<div class="brand-decoration hidden">
 				<div class="deco-container bg-cream rounded-borders full-wd">
 					<img src="./images/Logo-red-large.svg" alt="" aria-hidden="false" />
 				</div>
@@ -87,5 +96,15 @@
 			</div>
 			<button class="primary-btn">Primary button</button>
 		</section>
+		<div class="menu hidden">
+			<button class="close-btn"><img src="" alt="" /></button>
+			<div class="menu-links">
+				<a href="#">Inicio</a>
+				<a href="#">Redes Sociales</a>
+				<a href="#">¿Cómo colocar las uñas?</a>
+			</div>
+			<img src="v" class="crown-img" aria-hidden="true" />
+		</div>
+
 	</body>
 </html>

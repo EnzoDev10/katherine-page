@@ -1,0 +1,83 @@
+/* General Styles */
+@import url(utilities.css);
+
+
+/* Header Styles */
+header {
+	align-items: center;
+	background-color: var(--secondary-600);
+	display: flex;
+	padding: 1rem 2rem;
+	margin-top: 25px;
+}
+
+.logo {
+	margin-right: auto;
+	transform: scale(0.8);
+}
+
+/* Products Showcase Styles */
+#products-showcase {
+	gap: 0 20px;
+	padding: 12px;
+	min-height: 600px;
+}
+
+.welcome-message {
+	background-color: var(--secondary-600);
+	margin-bottom: 35px;
+}
+
+.cards-container {
+	display: grid;
+	gap: 25px;
+	grid-template-columns: 1fr;
+}
+
+.card {
+	border-radius: 20px;
+	position: relative;
+	width: 100%;
+	max-width: 336px;
+	margin: 0 auto;
+}
+
+.card-footer {
+	background-color: var(--secondary-600);
+	border-radius: 0 0 20px 20px;
+	padding: 15px 0;
+	text-align: center;
+	width: 100%;
+}
+
+
+/* .brand-decoration {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: auto;
+	max-width: 350px;
+	justify-content: flex-end;
+}
+
+.hands-logo-container {
+	display: grid;
+	gap: 0 10px;
+	grid-template-columns: 1fr 1fr;
+	margin: 25px 0;
+}
+
+.deco-container:not(.pattern-container) {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	padding: 20px;
+}
+
+.full-wd {
+	width: 100%;
+}
+
+.rotated {
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+} */
