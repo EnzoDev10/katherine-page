@@ -3,11 +3,18 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Judson&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="css/utilities.css" />
 		<link rel="stylesheet" href="css/products.css" />
-		<link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
 		<title>Katherine</title>
 	</head>
+
 	<body>
 		<header class="bg-red rounded-borders">
 			<a href="#" class="logo"
@@ -17,6 +24,8 @@
 				<img src="./images/Menu.png" alt="" aria-hidden="false" />
 			</button>
 		</header>
+
+		<!-- products -->
 		<section id="products-showcase">
 			<div class="welcome-message">
 				<h1>Bienvenida a mi página, encontrarás uñas press on</h1>
@@ -63,25 +72,26 @@
 					</div>
 				</div>
 			</div>
-			<div class="brand-decoration hidden">
-				<div class="deco-container bg-cream rounded-borders full-wd">
+			<!-- decoration -->
+			<div class="decoration-container">
+				<div class="deco-img-container bg-cream rounded-borders full-wd">
 					<img src="./images/Logo-red-large.svg" alt="" aria-hidden="false" />
 				</div>
 				<div class="hands-logo-container">
 					<div class="deco-container hand-container">
 						<img src="./images/hand.svg" alt="" aria-hidden="false" />
 					</div>
-					<div class="deco-container bg-red rounded-borders">
+					<div class="deco-img-container bg-red rounded-borders">
 						<img
 							src="./images/logo-cream-small.svg"
 							alt=""
 							aria-hidden="false"
 						/>
 					</div>
-					<div class="deco-container bg-cream rounded-borders">
+					<div class="deco-img-container bg-cream rounded-borders">
 						<img src="./images/logo-red-small.svg" alt="" aria-hidden="false" />
 					</div>
-					<div class="deco-container hand-container">
+					<div class="deco-img-container hand-container">
 						<img
 							src="./images/hand.svg"
 							class="rotated"
@@ -90,21 +100,22 @@
 						/>
 					</div>
 				</div>
-				<div class="deco-container pattern-container full-wd">
+				<div class="deco-img-container pattern-container full-wd">
 					<img src="./images/logo-pattern.svg" alt="" aria-hidden="false" />
 				</div>
 			</div>
-			<button class="primary-btn">Primary button</button>
-		</section>
-		<div class="menu hidden">
-			<button class="close-btn"><img src="" alt="" /></button>
-			<div class="menu-links">
-				<a href="#">Inicio</a>
-				<a href="#">Redes Sociales</a>
-				<a href="#">¿Cómo colocar las uñas?</a>
-			</div>
-			<img src="v" class="crown-img" aria-hidden="true" />
-		</div>
 
+			<!-- Menu -->
+			<div class="menu hidden bg-red">
+				<button class="close-btn"><img src="images/close.svg" alt="" /></button>
+				<div class="menu-links">
+					<a href="#">Inicio</a>
+					<a href="#">Redes Sociales</a>
+					<a href="#">¿Cómo colocar las uñas?</a>
+				</div>
+				<img src="images/crown.svg" class="crown-img" aria-hidden="true" />
+			</div>
+		</section>
 	</body>
+	<script src="index.js"></script>
 </html>
