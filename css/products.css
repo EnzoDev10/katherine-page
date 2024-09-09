@@ -1,7 +1,6 @@
 /* General Styles */
 @import url(utilities.css);
 
-
 /* Header Styles */
 header {
 	align-items: center;
@@ -18,9 +17,11 @@ header {
 
 /* Products Showcase Styles */
 #products-showcase {
+	display: flex;
+	flex-direction: column;
 	gap: 0 20px;
 	padding: 12px;
-	min-height: 600px;
+	padding-bottom: 0;
 }
 
 .welcome-message {
@@ -32,14 +33,12 @@ header {
 	display: grid;
 	gap: 25px;
 	grid-template-columns: 1fr;
+	margin: 0 auto;
 }
 
 .card {
 	border-radius: 20px;
 	position: relative;
-	width: 100%;
-	max-width: 336px;
-	margin: 0 auto;
 }
 
 .card-footer {
@@ -47,9 +46,11 @@ header {
 	border-radius: 0 0 20px 20px;
 	padding: 15px 0;
 	text-align: center;
-	width: 100%;
 }
 
+.decoration-container {
+	display: none;
+}
 
 /* .brand-decoration {
 	display: flex;
@@ -73,11 +74,4 @@ header {
 	padding: 20px;
 }
 
-.full-wd {
-	width: 100%;
-}
-
-.rotated {
-	-webkit-transform: scaleX(-1);
-	transform: scaleX(-1);
 } */
