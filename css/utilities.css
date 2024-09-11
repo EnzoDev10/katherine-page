@@ -20,6 +20,7 @@ body {
 	font-weight: 400;
 	letter-spacing: 0em;
 	line-height: 38px;
+	position: relative;
 }
 img,
 picture,
@@ -99,6 +100,11 @@ a {
 
 /*  Menu styles */
 
+.stop-scrolling {
+	height: 100%;
+	overflow: hidden;
+}
+
 .menu {
 	align-self: center;
 	border-radius: 20px 20px 0 0;
@@ -108,9 +114,27 @@ a {
 	position: sticky;
 }
 
+.menu-btn,
+.menu.active {
+	z-index: 2;
+}
+
+
 .menu.active {
 	flex-direction: column;
 	display: flex;
+}
+
+.overlay.active {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(3px);
 }
 
 .card,
@@ -121,20 +145,32 @@ a {
 	width: 100%;
 }
 
+.line {
+	background-color: var(--bg-light);
+	height: 3px;
+	width: 20px;
+}
+
 .menu-links {
 	display: flex;
 	flex-direction: column;
-	gap: 15px 0;
+	gap: 20px 0;
+	margin-top: 25px;
+}
+
+.menu-links > a {
+	text-decoration: underline;
+	text-underline-offset: 4px;
 }
 
 .crown-img {
 	width: 150px;
 	height: 150px;
-	align-self: center;
 }
 
-.close-btn {
-	align-self: flex-end;
+.line,
+.crown-img {
+	align-self: center;
 }
 
 /*colors style*/
