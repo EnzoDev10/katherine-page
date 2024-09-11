@@ -7,9 +7,9 @@ let overlay = document.querySelector('.overlay');
 function toggleMenu() {
 	// Changes between images depending on the state of the menu
 	if (!menuImg.classList.contains('active')) {
-		menuImg.src = 'images\\close.svg';
+		menuImg.src = 'images\\icons\\close.svg';
 	} else {
-		menuImg.src = 'images\\menu-icon.png';
+		menuImg.src = 'images\\icons\\menu-icon.png';
 	}
 
 	// Temporally disables scrolling on the page
