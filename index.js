@@ -9,7 +9,7 @@ function toggleMenu() {
 	if (!menuImg.classList.contains('active')) {
 		menuImg.src = 'images\\close.svg';
 	} else {
-		menuImg.src = 'images\\menu.png';
+		menuImg.src = 'images\\menu-icon.png';
 	}
 
 	// Temporally disables scrolling on the page
