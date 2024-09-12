@@ -4,7 +4,7 @@ let menuImg = document.querySelector('.menu-img');
 let menu = document.querySelector('.menu');
 let overlay = document.querySelector('.overlay');
 
-function toggleMenu() {
+menuBtn.addEventListener('click', function toggleMenu() {
 	// Changes between images depending on the state of the menu
 	if (!menuImg.classList.contains('active')) {
 		menuImg.src = 'images\\icons\\close.svg';
@@ -18,6 +18,4 @@ function toggleMenu() {
 	menuImg.classList.toggle('active');
 
 	overlay.classList.toggle('active');
-}
-
-menuBtn.addEventListener('click', toggleMenu);
+});
