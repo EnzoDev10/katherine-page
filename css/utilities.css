@@ -71,6 +71,11 @@ section {
 
 a {
 	text-decoration: none;
+	transition: color 0.3s;
+}
+
+a:hover {
+	color: var(--secondary-800);
 }
 
 .full-wd {
@@ -118,7 +123,6 @@ a {
 .menu.active {
 	z-index: 2;
 }
-
 
 .menu.active {
 	flex-direction: column;
@@ -190,6 +194,8 @@ a {
 	--primary-50: hsla(54, 100%, 96%, 1);
 	/* -- */
 	--secondary-600: hsla(349, 71%, 52%, 1);
+	--secondary-800: hsla(349, 71%, 40%, 1);
+
 	--secondary-300: hsla(355, 88%, 90%, 1);
 
 	/* -- */
