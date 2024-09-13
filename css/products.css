@@ -16,7 +16,7 @@ header {
 }
 
 /* Products Showcase Styles */
-#products-showcase {
+.products-showcase {
 	display: flex;
 	flex-direction: column;
 	gap: 0 20px;
@@ -40,13 +40,20 @@ header {
 	border-radius: 20px;
 	position: relative;
 	cursor: pointer;
+	transition: all 0.5s;
 }
 
 /* this selector styles the card on child link focus */
 .card:has(.card-link:focus, .card-link:hover) {
-	-webkit-animation: shadow-drop-2-center 0.4s
-		cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-	animation: shadow-drop-2-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+	transform: translateY(-5px);
+}
+
+.card:has(.card-link:focus) .card-footer {
+	animation: color-change 0.5s forwards;
+}
+/* Styles the elements that are not currently hovered */
+.cards-container:hover > .card:not(:hover) {
+	opacity: 0.8;
 }
 
 .card-link {
@@ -60,43 +67,36 @@ header {
 }
 
 .card-footer {
-	background-color: var(--primary-600);
 	border-radius: 0 0 20px 20px;
 	padding: 15px 0;
 	text-align: center;
+}
+
+.go-back {
+	background-color: var(--primary-600);
+	border-radius: 50%;
+	padding: 7px;
+	transition: all .5s;
+}
+
+.go-back:hover {
+	transform: translateY(-5px);
+}
+.go-back:active {
+	transform: translateY(-10px);
 }
 
 .decoration-container {
 	display: none;
 }
 
-/* Keyframes for the card states */
-@-webkit-keyframes shadow-drop-2-center {
-	0% {
-		-webkit-transform: translateZ(0);
-		transform: translateZ(0);
-		-webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+@keyframes color-change {
+	from {
+		background-color: var(--primary-600);
 	}
-	100% {
-		-webkit-transform: translateZ(50px);
-		transform: translateZ(50px);
-		-webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 1);
-		box-shadow: 0 0 20px 0px rgba(0, 0, 0, 1);
-	}
-}
-@keyframes shadow-drop-2-center {
-	0% {
-		-webkit-transform: translateZ(0);
-		transform: translateZ(0);
-		-webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-	}
-	100% {
-		-webkit-transform: translateZ(50px);
-		transform: translateZ(50px);
-		-webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 1);
-		box-shadow: 0 0 20px 0px rgba(0, 0, 0, 1);
+
+	to {
+		background-color: var(--primary-950);
 	}
 }
 

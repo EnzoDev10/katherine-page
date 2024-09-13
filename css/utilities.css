@@ -63,7 +63,7 @@ body {
 }
 
 header,
-section {
+main {
 	margin: auto;
 	max-width: 1200px;
 	width: 95%;
@@ -90,6 +90,10 @@ button:focus {
 
 .bg-red {
 	background-color: var(--primary-600);
+}
+
+.bg-red-dark {
+	background-color: var(--primary-950);
 }
 
 .bg-cream {
@@ -230,8 +234,7 @@ button:focus {
 	/* -- */
 	--primary-600: hsla(349, 71%, 52%, 1);
 	--primary-800: hsla(349, 71%, 40%, 1);
-	--primary-950: #490818;
-
+	--primary-950: hsla(349, 71%, 20%, 1);
 	--secondary-300: hsla(355, 88%, 90%, 1);
 
 	/* -- */
