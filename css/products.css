@@ -48,9 +48,18 @@ header {
 	transform: translateY(-5px);
 }
 
-.card:has(.card-link:focus) .card-footer {
-	animation: color-change 0.5s forwards;
+.card:has(.card-link:focus) .product-name.bg-red {
+	animation: lightToDark 0.5s forwards;
 }
+
+.card:has(.card-link:focus) .product-name.bg-red-dark {
+	animation: darkToLight 0.5s forwards;
+}
+
+.card:has(.card-link:active) {
+	transform: scale(0.95) rotateZ(1.7deg);
+}
+
 /* Styles the elements that are not currently hovered */
 .cards-container:hover > .card:not(:hover) {
 	opacity: 0.8;
@@ -66,7 +75,7 @@ header {
 	outline: none;
 }
 
-.card-footer {
+.product-name {
 	border-radius: 0 0 20px 20px;
 	padding: 15px 0;
 	text-align: center;
@@ -76,7 +85,7 @@ header {
 	background-color: var(--primary-600);
 	border-radius: 50%;
 	padding: 7px;
-	transition: all .5s;
+	transition: all 0.5s;
 }
 
 .go-back:hover {
@@ -90,13 +99,23 @@ header {
 	display: none;
 }
 
-@keyframes color-change {
+@keyframes lightToDark {
 	from {
 		background-color: var(--primary-600);
 	}
 
 	to {
 		background-color: var(--primary-950);
+	}
+}
+
+@keyframes darkToLight {
+	from {
+		background-color: var(--primary-950);
+	}
+
+	to {
+		background-color: var(--primary-600);
 	}
 }
 
