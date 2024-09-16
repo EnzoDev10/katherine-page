@@ -5,7 +5,7 @@ let menu = document.querySelector('.menu');
 let overlay = document.querySelector('.overlay');
 
 function openMenu() {
-	menuImg.src = 'images\\icons\\close.svg';
+	menuImg.src = '..\\images\\icons\\close.svg';
 	menu.classList.add('active');
 	menuImg.classList.add('active');
 
@@ -14,7 +14,7 @@ function openMenu() {
 }
 
 function closeMenu() {
-	menuImg.src = 'images\\icons\\menu-icon.png';
+	menuImg.src = '..\\images\\icons\\menu-icon.png';
 
 	menu.classList.remove('active');
 	menuImg.classList.remove('active');
