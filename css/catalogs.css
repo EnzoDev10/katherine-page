@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:wght@700&display=swap');
+
+@import url(utilities.css);
+
+main {
+	font-family: 'Amaranth', system-ui;
+	font-style: normal;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+/* I don't know why, but the 'go back' btn 
+doesn't work here unless I add this.
+ */
+a {
+	display: block;
+}
+
+.amaranth-regular {
+	font-family: 'Amaranth', system-ui;
+}
+
+.amaranth-bold {
+	font-family: 'Amaranth', system-ui;
+	font-weight: 700;
+	font-style: normal;
+}
+
+/* contiene las ímagenes, necesario el relative para los botones */
+.slider {
+	position: relative;
+	margin: 15px auto;
+	max-width: 750px;
+	width: 100%;
+}
+
+/* Por defecto oculta todas las ímagenes del slider*/
+.slides img {
+	width: 100%;
+	display: none;
+}
+
+/* displaySlide muestra la imagen pertinente y les agrega una animación */
+img.displaySlide {
+	display: block;
+	animation: fade 1s;
+}
+
+.slider button {
+	background-color: hsla(220, 3%, 70%, 1);
+	border-radius: 100%;
+	padding: 10px;
+
+	/* Posiciona los botones al medio del slider */
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	/* -- */
+}
+
+/* bastante explicativos por si solos */
+.prev {
+	left: 5px;
+}
+
+.next {
+	right: 5px;
+}
+
+#design-info {
+	width: 95%;
+	margin: 0 auto;
+}
+
+#design-title,
+#design-price {
+	font-size: 25px;
+	color: var(--text-color-dark);
+}
+
+.design-desc {
+	color: var(--text-color-neutral);
+	font-size: 16px;
+
+	margin-top: 10px;
+	margin-bottom: 25px;
+}
+
+#ask-btn {
+	align-items: center;
+	border-radius: 20px 0px;
+	color: var(--text-color-light);
+	display: flex;
+	gap: 10px;
+	margin: 0 auto;
+	padding: 5px 20px;
+}
+
+/* Animación para la aparición de las ímagenes */
+@keyframes fade {
+	from {
+		opacity: 0.2;
+	}
+	to {
+		opacity: 1;
+	}
+}

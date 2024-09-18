@@ -80,24 +80,6 @@ header {
 	text-align: center;
 }
 
-.go-back {
-	background-color: var(--primary-600);
-	border-radius: 50%;
-	padding: 7px;
-	transition: all 0.5s;
-}
-
-.go-back:hover {
-	transform: translateY(-5px);
-}
-.go-back:active {
-	transform: translateY(-10px);
-}
-
-.decoration-container {
-	display: none;
-}
-
 @keyframes lightToDark {
 	from {
 		background-color: var(--primary-600);

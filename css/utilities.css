@@ -9,7 +9,8 @@
 }
 * {
 	margin: 0;
-	color: var(--text-color);
+	padding: 0;
+	color: var(--text-color-light);
 }
 
 body {
@@ -19,7 +20,6 @@ body {
 	font-family: Judson;
 	font-weight: 400;
 	letter-spacing: 0em;
-	line-height: 38px;
 	position: relative;
 }
 img,
@@ -101,7 +101,7 @@ button:focus {
 }
 
 .rounded-borders {
-	border-radius: 0px 50px 0px 50px;
+	border-radius: 0px 50px;
 }
 
 .hidden {
@@ -227,6 +227,23 @@ button:focus {
 	align-self: center;
 }
 
+/* Go back Btn Styles */
+
+.go-back {
+	border-radius: 50%;
+	padding: 7px;
+	background-color: var(--primary-600);
+	margin: 10px 0;
+	transition: all 0.5s;
+}
+
+.go-back:hover {
+	transform: translateY(-5px);
+}
+.go-back:active {
+	transform: translateY(-10px);
+}
+
 /*colors style*/
 :root {
 	--bg-100: hsla(55, 97%, 88%, 1);
@@ -241,5 +258,7 @@ button:focus {
 	--bg-light: hsla(0, 100%, 98%, 1);
 
 	/* texts colors */
-	--text-color: rgba(244, 244, 244, 1);
+	--text-color-light: hsla(0, 0%, 96%, 1);
+	--text-color-neutral: hsla(0, 0%, 50%, 1);
+	--text-color-dark: hsla(0, 0%, 0%, 1);
 }
