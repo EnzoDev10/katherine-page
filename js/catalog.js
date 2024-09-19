@@ -1,53 +1,77 @@
-// IMAGE SLIDER
-// agarra todas las ímagenes
 const slides = document.querySelectorAll('.slides img');
 const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
-/* Inicializa el index de las imagenes y el de los intervalos */
+
+const designTitle = document.querySelector('#design-title');
+const designPrice = document.querySelector('#design-price');
+const designDesc = document.querySelector('.design-desc');
+
+/* Initializes the index for the images and the var that for the interval */
 let slideIndex = 0;
 let intervalId = null;
 
-// comienza el slider una vez que todo el contenido cargo
+// The slider only starts once all the content is loaded
 document.addEventListener('DOMContentLoaded', initializeSlider);
 
 prevBtn.addEventListener('click', prevSlide);
 nextBtn.addEventListener('click', nextSlide);
 
-// Buscar explicacion de esto
 function initializeSlider() {
-	// Si hay por lo menos dos imagenes, comienza el slider
+	// Only starts the slider if there are more than one image
 	if (slides.length > 0) {
 		slides[slideIndex].classList.add('displaySlide');
-		/* cambia las imagenes cada 2 segundos */
 		intervalId = setInterval(nextSlide, 5000);
 	}
 }
 
 function showSlide(index) {
-	// si el index se vuelve igual o mayor al index de la ultima imagen o menor a cero, se reinicia
+	// If the image index is equal or higher than the amount of images there is or lower than zero, restarts the slider
 	if (index >= slides.length) {
 		slideIndex = 0;
 	} else if (index < 0) {
 		slideIndex = slides.length - 1;
 	}
-	// oculta todas las imagenes que no tengan el index
+	// Hides every image on the slider
 	slides.forEach((slide) => {
 		slide.classList.remove('displaySlide');
 	});
-	// Muestra la imagen del index
+	// But shows the one that corresponds to the index
 	slides[slideIndex].classList.add('displaySlide');
+	switch (slideIndex) {
+		case 0:
+			designTitle.textContent = 'Uñas diseño 1';
+			designPrice.textContent = '$50';
+			designDesc.textContent =
+				'Diseño 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nulla ducimus sint molestiae aperiam labore corporis debitis id ipsa provident.';
+			break;
+		case 1:
+			designTitle.textContent = 'Uñas diseño 2';
+			designPrice.textContent = '$125';
+			designDesc.textContent =
+				'Diseño 2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nulla ducimus sint molestiae aperiam labore corporis debitis id ipsa provident.';
+			break;
+		case 2:
+			designTitle.textContent = 'Uñas diseño 3';
+			designPrice.textContent = '$100';
+			designDesc.textContent =
+				'Diseño 3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nulla ducimus sint molestiae aperiam labore corporis debitis id ipsa provident.';
+			break;
+
+		default:
+			break;
+	}
 }
 
 function prevSlide() {
-	//reinicia el intervalo
+	// Restarts the interval so the image doesn't change abruptly
 	clearInterval(intervalId);
-	// elige la anterior imagen y la muestra
+	// shows the previous image
 	slideIndex--;
 	showSlide(slideIndex);
 }
 
 function nextSlide() {
-	// elige la siguiente imagen y la muestra
+	// Shows the next image
 	slideIndex++;
 	showSlide(slideIndex);
 }
