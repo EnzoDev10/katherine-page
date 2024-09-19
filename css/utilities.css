@@ -69,6 +69,15 @@ main {
 	width: 95%;
 }
 
+/* Header Styles */
+header {
+	align-items: center;
+	background-color: var(--primary-600);
+	display: flex;
+	padding: 1rem 2rem;
+	margin-top: 25px;
+}
+
 a {
 	text-decoration: none;
 	width: fit-content;

@@ -1,14 +1,7 @@
 /* General Styles */
 @import url(utilities.css);
 
-/* Header Styles */
-header {
-	align-items: center;
-	background-color: var(--primary-600);
-	display: flex;
-	padding: 1rem 2rem;
-	margin-top: 25px;
-}
+
 
 .logo {
 	margin-right: auto;
