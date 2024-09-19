@@ -23,8 +23,9 @@ header {
 	padding-bottom: 0;
 }
 
-.welcome-message {
+.welcome-message h1 {
 	background-color: var(--primary-600);
+	font-size: 25px;
 	margin-bottom: 35px;
 }
 
@@ -98,6 +99,10 @@ header {
 	to {
 		background-color: var(--primary-600);
 	}
+}
+
+.decoration-container {
+	display: none;
 }
 
 /* .brand-decoration {
