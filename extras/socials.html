@@ -3,7 +3,11 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+		<link
+			rel="shortcut icon"
+			href="../images/icons/favicon.ico"
+			type="image/x-icon"
+		/>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -11,18 +15,67 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="../css/utilities.css" />
-		<link rel="stylesheet" href="../css/socials.css" />
-		<title>Redes</title>
+		<link rel="stylesheet" href="../css/products.css" />
+		<title>Redes Sociales</title>
 	</head>
 	<body>
 		<header class="bg-red rounded-borders">
-			<img class="logo" src="../images/Logo-cream-large.svg" alt="" />
-			<button class="menu-btn">
-				<img src="./images/Menu.png" alt="" aria-hidden="false" />
+			<img class="logo" src="../images/logo/Logo-cream-large.svg" alt="" />
+
+			<button class="menu-btn" aria-label="Abrir menu">
+				<img
+					src="../images/icons/menu-icon.png"
+					class="menu-img"
+					alt=""
+					aria-hidden="true"
+				/>
 			</button>
 		</header>
-		<div class="title-container">
-			<h1>Redes Sociales</h1>
+
+		<main aria-label="Encuentra un medio por el que comunicarte">
+			<!-- Go back Button -->
+			<!-- 			<a href="../index.html" class="go-back"
+				><img src="../images/icons/arrow.svg" alt=""
+			/></a> -->
+
+			<section>
+				<h1 class="welcome-message bg-red">Redes Sociales</h1>
+
+				<article>
+					<a
+						href="https://ig.me/m/{@katherine.nails}"
+						class="bg-red"
+						aria-label="Usuario de instagram"
+					>
+						@katherine.nails
+					</a>
+
+					<img src="../images/icons/ig-btn.png" alt="" aria-hidden="true" />
+				</article>
+				<article>
+					<img src="../images/icons/wsp-btn.png" alt="" aria-hidden="true" />
+
+					<a href="" class="bg-red" aria-label="Número de telefono"
+						>1162556413</a
+					>
+				</article>
+			</section>
+		</main>
+
+		<!-- Menu -->
+		<div class="overlay"></div>
+		<div class="menu bg-red">
+			<div class="line"></div>
+			<div class="links">
+				<a href="../index.html" class="menu-link">Inicio</a>
+				<a href="socials.html" class="menu-link">Redes Sociales</a>
+				<a href="tutorial.html" class="menu-link">¿Cómo colocar las uñas?</a>
+			</div>
+			<img
+				src="../images/icons/crown.svg"
+				class="crown-img"
+				aria-hidden="true"
+			/>
 		</div>
 	</body>
 	<script src="../js/index.js"></script>

@@ -74,6 +74,7 @@ header {
 	align-items: center;
 	background-color: var(--primary-600);
 	display: flex;
+	justify-content: space-between;
 	padding: 1rem 2rem;
 	margin-top: 25px;
 }
@@ -81,6 +82,7 @@ header {
 a {
 	text-decoration: none;
 	width: fit-content;
+	display: block;
 }
 
 a:focus,
@@ -251,6 +253,40 @@ button:focus {
 }
 .go-back:active {
 	transform: translateY(-10px);
+}
+
+/* Socials and tutorial shared Styles */
+
+.welcome-message {
+	border-radius: 0px 20px;
+	font-size: 25px;
+	text-align: center;
+	margin-top: 25px;
+}
+article {
+	display: flex;
+	justify-content: space-evenly;
+	margin-top: 20px;
+}
+
+article a {
+	align-self: center;
+	border-radius: 10px;
+	font-size: 16px;
+	height: fit-content;
+	padding: 10px;
+}
+
+.video-container {
+	text-align: center;
+}
+
+iframe {
+	margin-top: 25px;
+	min-height: 250px;
+
+	width: 95%;
+	max-width: 500px;
 }
 
 /*colors style*/

@@ -13,9 +13,6 @@ main {
 /* I don't know why, but the 'go back' btn 
 doesn't work here unless I add this.
  */
-a {
-	display: block;
-}
 
 .amaranth-regular {
 	font-family: 'Amaranth', system-ui;

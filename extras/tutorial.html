@@ -3,42 +3,69 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+		<link
+			rel="shortcut icon"
+			href="../images/icons/favicon.ico"
+			type="image/x-icon"
+		/>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Judson&display=swap"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="css/utilities.css" />
-		<link rel="stylesheet" href="css/tutorial.css" />
+		<link rel="stylesheet" href="../css/utilities.css" />
+		<link rel="stylesheet" href="../css/products.css" />
 		<title>Tutorial</title>
 	</head>
 	<body>
 		<header class="bg-red rounded-borders">
-			<img class="logo" src="./images/Logo-cream-large.svg" alt="" />
+			<img class="logo" src="../images/logo/Logo-cream-large.svg" alt="" />
 
 			<button class="menu-btn">
-				<img src="./images/Menu.png" alt="" aria-hidden="false" />
+				<img
+					src="../images/icons/menu-icon.png"
+					class="menu-img"
+					alt=""
+					aria-hidden="false"
+				/>
 			</button>
 		</header>
-		<div class="title-container">
-			<h1>¿Cómo coloco las uñas?</h1>
-		</div>
 
-		<div class="contact-card">
-			<div class="contact-text">
-				<h2>:</h2>
-				<a href="#"></a>
+		<main aria-label="encuentra un video que describe como colocarse las uñas">
+			<!-- Go back Button -->
+			<!-- 			<a href="../index.html" class="go-back"
+				><img src="../images/icons/arrow.svg" alt=""
+			/></a> -->
+
+			<section class="video-container">
+				<h1 class="welcome-message bg-red">¿Cómo coloco las uñas?</h1>
+
+				<iframe
+					src="https://www.youtube.com/embed/LSxHxXanwKg?si=VyGcIXOFglvhfC5Q"
+					title="YouTube video player"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					referrerpolicy="strict-origin-when-cross-origin"
+					allowfullscreen
+				></iframe>
+			</section>
+		</main>
+
+		<!-- Menu -->
+		<div class="overlay"></div>
+		<div class="menu bg-red">
+			<div class="line"></div>
+			<div class="links">
+				<a href="../index.html" class="menu-link">Inicio</a>
+				<a href="socials.html" class="menu-link">Redes Sociales</a>
+				<a href="tutorial.html" class="menu-link">¿Cómo colocar las uñas?</a>
 			</div>
-			<img src="" alt="" />
-		</div>
-		<div class="contact-card">
-			<div class="contact-text">
-				<h2>:</h2>
-				<a href="#"></a>
-			</div>
-			<img src="" alt="" />
+			<img
+				src="../images/icons/crown.svg"
+				class="crown-img"
+				aria-hidden="true"
+			/>
 		</div>
 	</body>
 	<script src="../js/index.js"></script>
