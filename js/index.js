@@ -5,11 +5,13 @@ let menu = document.querySelector('.menu');
 let overlay = document.querySelector('.overlay');
 
 let openIconSrc;
-let closeIconSrc = '..\\images\\icons\\close.svg';
+let closeIconSrc;
 
 function openMenu() {
-	if (window.document.pathname === '/index.html') {
+	if (window.location.pathname === '/index.html') {
 		closeIconSrc = 'images\\icons\\close.svg';
+	} else {
+		closeIconSrc = '..\\images\\icons\\close.svg';
 	}
 
 	openIconSrc = menuImg.src;
