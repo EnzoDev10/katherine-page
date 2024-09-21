@@ -6,9 +6,8 @@ const designTitle = document.querySelector('#design-title');
 const designPrice = document.querySelector('#design-price');
 const designDesc = document.querySelector('.design-desc');
 
-/* Initializes the index for the images and the var that for the interval */
+/* Initializes the index for the images */
 let slideIndex = 0;
-let intervalId = null;
 
 // The slider only starts once all the content is loaded
 document.addEventListener('DOMContentLoaded', initializeSlider);
@@ -62,8 +61,6 @@ function showSlide(index) {
 }
 
 function prevSlide() {
-	// Restarts the interval so the image doesn't change abruptly
-	clearInterval(intervalId);
 	// shows the previous image
 	slideIndex--;
 	showSlide(slideIndex);
