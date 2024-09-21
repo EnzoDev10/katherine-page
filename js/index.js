@@ -1,5 +1,6 @@
 let menuBtn = document.querySelector('.menu-btn');
-let menuImg = document.querySelector('.menu-img');
+let openImg = document.querySelector('#open-img');
+let closeImg = document.querySelector('#close-img');
 
 let menu = document.querySelector('.menu');
 let overlay = document.querySelector('.overlay');
@@ -8,25 +9,20 @@ let openIconSrc;
 let closeIconSrc;
 
 function openMenu() {
-	if (window.location.pathname === '/index.html') {
-		closeIconSrc = 'images\\icons\\close.svg';
-	} else {
-		closeIconSrc = '..\\images\\icons\\close.svg';
-	}
+	openImg.classList.toggle('active');
+	closeImg.classList.toggle('active');
 
-	openIconSrc = menuImg.src;
-	menuImg.src = closeIconSrc;
 	menu.classList.add('active');
-	menuImg.classList.add('active');
 
 	document.body.classList.toggle('stop-scrolling');
 	overlay.classList.add('active');
 }
 
 function closeMenu() {
-	menuImg.src = openIconSrc;
+	openImg.classList.toggle('active');
+	closeImg.classList.toggle('active');
+
 	menu.classList.remove('active');
-	menuImg.classList.remove('active');
 
 	document.body.classList.remove('stop-scrolling');
 	overlay.classList.remove('active');
@@ -34,7 +30,7 @@ function closeMenu() {
 
 menuBtn.addEventListener('click', () => {
 	// Changes between images depending on the state of the menu
-	if (!menuImg.classList.contains('active')) {
+	if (openImg.classList.contains('active')) {
 		openMenu();
 	} else {
 		closeMenu();

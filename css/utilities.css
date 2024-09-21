@@ -69,16 +69,6 @@ main {
 	width: 95%;
 }
 
-/* Header Styles */
-header {
-	align-items: center;
-	background-color: var(--primary-600);
-	display: flex;
-	justify-content: space-between;
-	padding: 1rem 2rem;
-	margin-top: 25px;
-}
-
 a {
 	text-decoration: none;
 	width: fit-content;
@@ -117,6 +107,24 @@ button:focus {
 
 .hidden {
 	display: none;
+}
+
+/* Header Styles */
+header {
+	align-items: center;
+	background-color: var(--primary-600);
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem 2rem;
+	margin-top: 25px;
+}
+
+.menu-img {
+	display: none;
+}
+
+.menu-img.active {
+	display: block;
 }
 
 /*  Menu styles */
