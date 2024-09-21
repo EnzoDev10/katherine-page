@@ -271,19 +271,37 @@ header {
 	text-align: center;
 	margin-top: 25px;
 }
+
+h2 {
+	font-family: 'Amaranth', system-ui;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+}
 article {
 	display: flex;
 	justify-content: space-evenly;
 	margin-top: 20px;
 }
 
-article a {
+.social-link {
 	align-self: center;
 	border-radius: 10px;
 	font-size: 16px;
 	height: fit-content;
 	padding: 10px;
+	transition: all 0.5s;
 }
+
+.social-link:hover {
+	transform: translateY(-5px);
+}
+.social-link:focus {
+	animation: lightToDark 0.5s forwards;
+}
+
+
+
 
 .video-container {
 	text-align: center;
@@ -295,6 +313,27 @@ iframe {
 
 	width: 95%;
 	max-width: 500px;
+}
+
+/* Animation */
+@keyframes lightToDark {
+	from {
+		background-color: var(--primary-600);
+	}
+
+	to {
+		background-color: var(--primary-950);
+	}
+}
+
+@keyframes darkToLight {
+	from {
+		background-color: var(--primary-950);
+	}
+
+	to {
+		background-color: var(--primary-600);
+	}
 }
 
 /*colors style*/

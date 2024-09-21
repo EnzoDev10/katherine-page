@@ -74,25 +74,7 @@
 	text-align: center;
 }
 
-@keyframes lightToDark {
-	from {
-		background-color: var(--primary-600);
-	}
 
-	to {
-		background-color: var(--primary-950);
-	}
-}
-
-@keyframes darkToLight {
-	from {
-		background-color: var(--primary-950);
-	}
-
-	to {
-		background-color: var(--primary-600);
-	}
-}
 
 .decoration-container {
 	display: none;
