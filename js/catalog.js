@@ -20,7 +20,6 @@ function initializeSlider() {
 	// Only starts the slider if there are more than one image
 	if (slides.length > 0) {
 		slides[slideIndex].classList.add('displaySlide');
-		intervalId = setInterval(nextSlide, 5000);
 	}
 }
 
