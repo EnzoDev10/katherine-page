@@ -4,8 +4,16 @@ let menuImg = document.querySelector('.menu-img');
 let menu = document.querySelector('.menu');
 let overlay = document.querySelector('.overlay');
 
+let openIconSrc;
+let closeIconSrc = '..\\images\\icons\\close.svg';
+
 function openMenu() {
-	menuImg.src = '..\\images\\icons\\close.svg';
+	if (window.document.pathname === '/index.html') {
+		closeIconSrc = 'images\\icons\\close.svg';
+	}
+
+	openIconSrc = menuImg.src;
+	menuImg.src = closeIconSrc;
 	menu.classList.add('active');
 	menuImg.classList.add('active');
 
@@ -14,8 +22,7 @@ function openMenu() {
 }
 
 function closeMenu() {
-	menuImg.src = '..\\images\\icons\\menu-icon.png';
-
+	menuImg.src = openIconSrc;
 	menu.classList.remove('active');
 	menuImg.classList.remove('active');
 
