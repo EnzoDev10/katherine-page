@@ -1,22 +1,18 @@
 /* General Styles */
 @import url(utilities.css);
 
-
-
 .logo {
 	margin-right: auto;
 }
 
 /* Products Showcase Styles */
-.products-showcase {
-	display: flex;
-	flex-direction: column;
+main {
+	display: grid;
 	gap: 0 20px;
 	padding: 12px;
-	padding-bottom: 0;
 }
 
-.welcome-message h1 {
+h1 {
 	background-color: var(--primary-600);
 	font-size: 25px;
 	margin-bottom: 35px;
@@ -74,32 +70,49 @@
 	text-align: center;
 }
 
-
-
 .decoration-container {
 	display: none;
 }
 
-/* .brand-decoration {
-	display: flex;
-	flex-wrap: wrap;
-	margin-left: auto;
-	max-width: 350px;
-	justify-content: flex-end;
+.bg-gradient {
+	background: var(--linear-gradient);
 }
 
-.hands-logo-container {
-	display: grid;
-	gap: 0 10px;
-	grid-template-columns: 1fr 1fr;
-	margin: 25px 0;
+@media screen and (min-width: 768px) {
+	.cards-container {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 225px;
+		max-width: 750px;
+	}
 }
 
-.deco-container:not(.pattern-container) {
-	align-items: center;
-	display: flex;
-	justify-content: center;
-	padding: 20px;
-}
+@media screen and (min-width: 1024px) {
+	.grid-wrapper {
+		display: grid;
+		gap: 25px;
+		grid-template-columns: 2.5fr 1fr;
+		margin: 0 auto;
+	}
+	.decoration-container {
+		display: block;
+	}
 
-} */
+	.grid-decoration {
+		display: grid;
+		gap: 15px;
+		grid-template-columns: repeat(2, 1fr);
+		margin: 10px 0;
+	}
+
+	.decoration {
+		display: flex;
+		align-items: center;
+	}
+	.decoration img:not(.hand, .pattern) {
+		padding: 15px;
+	}
+
+	.rounded-decoration {
+		border-radius: 0 30px;
+	}
+}

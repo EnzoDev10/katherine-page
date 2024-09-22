@@ -80,10 +80,6 @@ button:focus {
 	outline-color: var(--primary-950);
 }
 
-.full-wd {
-	width: 100%;
-}
-
 .rotated {
 	-webkit-transform: scaleX(-1);
 	transform: scaleX(-1);
@@ -98,7 +94,7 @@ button:focus {
 }
 
 .bg-cream {
-	background-color: var(--primary-100);
+	background-color: var(--bg-100);
 }
 
 .rounded-borders {
@@ -269,7 +265,7 @@ header {
 	border-radius: 0px 20px;
 	font-size: 25px;
 	text-align: center;
-	margin-top: 25px;
+	margin: 15px 0;
 }
 
 h2 {
@@ -299,9 +295,6 @@ article {
 .social-link:focus {
 	animation: lightToDark 0.5s forwards;
 }
-
-
-
 
 .video-container {
 	text-align: center;
@@ -353,4 +346,10 @@ iframe {
 	--text-color-light: hsla(0, 0%, 96%, 1);
 	--text-color-neutral: hsla(0, 0%, 50%, 1);
 	--text-color-dark: hsla(0, 0%, 0%, 1);
+	--linear-gradient: linear-gradient(
+		180deg,
+		rgba(219, 46, 78, 1) 40%,
+		rgba(174, 30, 57, 1) 75%,
+		rgba(149, 25, 47, 1) 100%
+	);
 }
