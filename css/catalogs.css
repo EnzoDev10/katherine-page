@@ -3,8 +3,9 @@
 main {
 	font-family: 'Amaranth', system-ui;
 	font-style: normal;
-	margin-top: 10px;
 	margin-bottom: 20px;
+	margin-top: 10px;
+	max-width: 500px;
 	width: 100%;
 }
 
@@ -92,12 +93,18 @@ img.displaySlide {
 	padding: 5px 20px;
 }
 
-/* Animación para la aparición de las ímagenes */
 @keyframes fade {
 	from {
 		opacity: 0.2;
 	}
 	to {
 		opacity: 1;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	main {
+		max-width: 700px;
+		width: 90%;
 	}
 }

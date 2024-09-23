@@ -48,6 +48,31 @@ h6 {
 }
 /* This was added by me */
 
+/*colors style*/
+:root {
+	--bg-100: hsla(55, 97%, 88%, 1);
+	--bg-50: hsla(54, 100%, 96%, 1);
+	/* -- */
+	--primary-600: hsla(349, 71%, 52%, 1);
+	--primary-800: hsla(349, 71%, 40%, 1);
+	--primary-950: hsla(349, 71%, 20%, 1);
+	--secondary-300: hsla(355, 88%, 90%, 1);
+
+	/* -- */
+	--bg-light: hsla(0, 100%, 98%, 1);
+
+	/* texts colors */
+	--text-color-light: hsla(0, 0%, 96%, 1);
+	--text-color-neutral: hsla(0, 0%, 50%, 1);
+	--text-color-dark: hsla(0, 0%, 0%, 1);
+	--linear-gradient: linear-gradient(
+		180deg,
+		rgba(219, 46, 78, 1) 40%,
+		rgba(174, 30, 57, 1) 75%,
+		rgba(149, 25, 47, 1) 100%
+	);
+}
+
 button {
 	border: 0;
 	background-color: transparent;
@@ -121,6 +146,13 @@ header {
 
 .menu-img.active {
 	display: block;
+}
+
+.desktop-nav {
+	display: none;
+}
+ul {
+	list-style: none;
 }
 
 /*  Menu styles */
@@ -256,56 +288,69 @@ header {
 	transform: translateY(-5px);
 }
 .go-back:active {
-	transform: translateY(-10px);
+	transform: translateY(0);
 }
 
-/* Socials and tutorial shared Styles */
-
-.welcome-message {
-	border-radius: 0px 20px;
-	font-size: 25px;
-	text-align: center;
-	margin: 15px 0;
-}
-
-h2 {
-	font-family: 'Amaranth', system-ui;
-	font-style: normal;
-	font-weight: 400;
-	font-size: 20px;
-}
-article {
-	display: flex;
-	justify-content: space-evenly;
-	margin-top: 20px;
-}
-
-.social-link {
-	align-self: center;
-	border-radius: 10px;
-	font-size: 16px;
-	height: fit-content;
-	padding: 10px;
-	transition: all 0.5s;
-}
-
-.social-link:hover {
-	transform: translateY(-5px);
-}
-.social-link:focus {
+.go-back:focus {
 	animation: lightToDark 0.5s forwards;
 }
 
-.video-container {
-	text-align: center;
+.decoration-container {
+	display: none;
 }
 
-iframe {
-	margin-top: 25px;
-	min-height: 250px;
+.bg-gradient {
+	background: var(--linear-gradient);
+}
 
-	width: 95%;
-	max-width: 500px;
+@media screen and (min-width: 768px) {
+	.menu-btn,
+	.open-img {
+		display: none;
+	}
+
+	nav {
+		display: initial;
+	}
+
+	nav ul {
+		display: flex;
+		gap: 35px;
+		font-size: 20px;
+		list-style: none;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.grid-wrapper {
+		display: grid;
+		gap: 25px;
+		grid-template-columns: 2.5fr 1fr;
+		margin: 0 auto;
+	}
+	.decoration-container {
+		display: block;
+		max-width: 310px;
+	}
+
+	.grid-decoration {
+		display: grid;
+		gap: 15px;
+		grid-template-columns: repeat(2, 1fr);
+		margin: 10px 0;
+	}
+
+	.decoration {
+		display: flex;
+		align-items: center;
+	}
+	.decoration img:not(.hand, .pattern) {
+		padding: 15px;
+	}
+
+	.rounded-decoration {
+		border-radius: 0 30px;
+	}
 }
 
 /* Animation */
@@ -329,27 +374,24 @@ iframe {
 	}
 }
 
-/*colors style*/
-:root {
-	--bg-100: hsla(55, 97%, 88%, 1);
-	--bg-50: hsla(54, 100%, 96%, 1);
-	/* -- */
-	--primary-600: hsla(349, 71%, 52%, 1);
-	--primary-800: hsla(349, 71%, 40%, 1);
-	--primary-950: hsla(349, 71%, 20%, 1);
-	--secondary-300: hsla(355, 88%, 90%, 1);
+@media screen and (min-width: 768px) {
+	.desktop-nav {
+		display: initial;
+	}
 
-	/* -- */
-	--bg-light: hsla(0, 100%, 98%, 1);
+	.nav-link {
+		padding: 0 5px;
+		transition: all 0.5s;
+	}
 
-	/* texts colors */
-	--text-color-light: hsla(0, 0%, 96%, 1);
-	--text-color-neutral: hsla(0, 0%, 50%, 1);
-	--text-color-dark: hsla(0, 0%, 0%, 1);
-	--linear-gradient: linear-gradient(
-		180deg,
-		rgba(219, 46, 78, 1) 40%,
-		rgba(174, 30, 57, 1) 75%,
-		rgba(149, 25, 47, 1) 100%
-	);
+	.nav-link:hover {
+		transform: translateY(-5px);
+	}
+	.nav-link:active {
+		transform: translateY(0);
+	}
+
+	.nav-link:focus {
+		animation: lightToDark 0.5s forwards;
+	}
 }
