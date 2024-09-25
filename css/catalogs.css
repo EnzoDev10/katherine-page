@@ -1,26 +1,11 @@
 @import url(utilities.css);
 
 main {
-	font-family: 'Amaranth', system-ui;
 	font-style: normal;
 	margin-bottom: 20px;
 	margin-top: 10px;
 	max-width: 500px;
 	width: 100%;
-}
-
-/* I don't know why, but the 'go back' btn 
-doesn't work here unless I add this.
- */
-
-.amaranth-regular {
-	font-family: 'Amaranth', system-ui;
-}
-
-.amaranth-bold {
-	font-family: 'Amaranth', system-ui;
-	font-weight: 700;
-	font-style: normal;
 }
 
 /* contiene las ímagenes, necesario el relative para los botones */
@@ -37,8 +22,8 @@ doesn't work here unless I add this.
 	display: none;
 }
 
-/* displaySlide muestra la imagen pertinente y les agrega una animación */
-img.displaySlide {
+/* Muestra la imagen pertinente y les agrega una animación */
+img.display-slide {
 	display: block;
 	animation: fade 1s;
 }
@@ -62,6 +47,10 @@ img.displaySlide {
 
 .next {
 	right: 5px;
+}
+
+#design-info {
+	font-family: 'Amaranth', system-ui;
 }
 
 #design-info {
@@ -106,5 +95,11 @@ img.displaySlide {
 	main {
 		max-width: 700px;
 		width: 90%;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.display-slide {
+		max-width: 400px;
+		margin: 0 auto;
 	}
 }

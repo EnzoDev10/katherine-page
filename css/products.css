@@ -1,15 +1,15 @@
 /* General Styles */
 @import url(utilities.css);
 
-.logo {
-	margin-right: auto;
-}
-
 /* Products Showcase Styles */
 main {
 	display: grid;
 	gap: 0 20px;
 	padding: 12px;
+}
+
+.home-main {
+	padding-top: 64px;
 }
 
 h1 {
@@ -22,6 +22,8 @@ h1 {
 	display: grid;
 	gap: 25px;
 	grid-template-columns: 1fr;
+	height: fit-content;
+
 	margin: 0 auto;
 }
 
@@ -50,7 +52,7 @@ h1 {
 }
 
 /* Styles the elements that are not currently hovered */
-.cards-container:hover > .card:not(:hover) {
+.cards-container:has(.card:hover) > .card:not(:hover) {
 	opacity: 0.8;
 }
 

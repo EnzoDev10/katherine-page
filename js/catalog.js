@@ -18,7 +18,7 @@ nextBtn.addEventListener('click', nextSlide);
 function initializeSlider() {
 	// Only starts the slider if there are more than one image
 	if (slides.length > 0) {
-		slides[slideIndex].classList.add('displaySlide');
+		slides[slideIndex].classList.add('display-slide');
 	}
 }
 
@@ -31,10 +31,10 @@ function showSlide(index) {
 	}
 	// Hides every image on the slider
 	slides.forEach((slide) => {
-		slide.classList.remove('displaySlide');
+		slide.classList.remove('display-slide');
 	});
 	// But shows the one that corresponds to the index
-	slides[slideIndex].classList.add('displaySlide');
+	slides[slideIndex].classList.add('display-slide');
 	switch (slideIndex) {
 		case 0:
 			designTitle.textContent = 'Uñas diseño 1';
